@@ -1,0 +1,10 @@
+127.0.0.1 - - [10/Sep/2026 17:02:39] "HEAD /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:10] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:10] "GET /css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:10] "GET /js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:16] "GET /calculators.html HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:16] "GET /js/calculators.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:19] "GET /schedule.html HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:19] "GET /js/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [10/Sep/2026 17:03:19] "GET /js/schedule.js HTTP/1.1" 200 -
+127.0.0.1 - - [10/Sep/2026 17:03:21] "GET /pricing.html HTTP/1.1" 200 -

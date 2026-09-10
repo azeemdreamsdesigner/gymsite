@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Class Schedule & Timetable - Fista Fitness</title>
+  <meta name="description" content="View the weekly workout timetable for Fista Fitness. Filter class schedules by day of week or workout type (HIIT, Strength, Yoga, Boxing, Crossfit). Reserve your spot now!">
+  <meta name="keywords" content="gym schedule, fitness timetable, class times, workout schedule, HIIT class time, yoga timetable, Fista Fitness schedule">
+  <link rel="canonical" href="https://fistafitness.com/schedule.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fistafitness.com/schedule.html">
+  <meta property="og:title" content="Interactive Class Schedule - Fista Fitness">
+  <meta property="og:description" content="Explore our weekly class timetable. Filter sessions by day and category to reserve your spot.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fista Fitness Weekly Schedule">
+  <meta name="twitter:description" content="Plan your fitness week with our full class timetable. HIIT, Powerlifting, Yoga & Boxing slots available.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=1200">
+
+  <!-- Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Teko:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Schedule",
+    "name": "Fista Fitness Weekly Class Schedule",
+    "scheduleTimezone": "America/New_York"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Fista Fitness Home">
+        <span class="brand-icon"><i class="fa-solid fa-dumbbell"></i></span>
+        <span>FISTA <span class="accent">FITNESS</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="classes.html" class="nav-link">Classes</a></li>
+          <li><a href="schedule.html" class="nav-link active">Schedule</a></li>
+          <li><a href="pricing.html" class="nav-link">Membership</a></li>
+          <li><a href="calculators.html" class="nav-link">Calculators</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle dark/light mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="pricing.html" class="btn btn-primary btn-sm">Join Now</a>
+        <button class="mobile-menu-btn" id="mobileMenuOpen" aria-label="Open mobile menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon"><i class="fa-solid fa-dumbbell"></i></span>
+        <span>FISTA <span class="accent">FITNESS</span></span>
+      </a>
+      <button class="drawer-close" id="mobileMenuClose" aria-label="Close mobile menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link">About Us</a></li>
+      <li><a href="classes.html" class="drawer-link">Classes</a></li>
+      <li><a href="schedule.html" class="drawer-link active">Schedule</a></li>
+      <li><a href="pricing.html" class="drawer-link">Membership</a></li>
+      <li><a href="calculators.html" class="drawer-link">Calculators</a></li>
+      <li><a href="blog.html" class="drawer-link">Blog</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <h1 class="page-title">WEEKLY CLASS TIMETABLE</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i> <span>Schedule</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule Filter & Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Plan Your Workouts</span>
+        <h2 class="section-title">INTERACTIVE TIMETABLE</h2>
+        <p class="section-desc">Select a day or workout category to filter upcoming class sessions and reserve your spot.</p>
+      </div>
+
+      <!-- Day Filters -->
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+        <button class="btn btn-outline btn-sm schedule-day-btn active" data-day="all">All Days</button>
+        <button class="btn btn-outline btn-sm schedule-day-btn" data-day="monday">Monday</button>
+        <button class="btn btn-outline btn-sm schedule-day-btn" data-day="tuesday">Tuesday</button>
+        <button class="btn btn-outline btn-sm schedule-day-btn" data-day="wednesday">Wednesday</button>
+        <button class="btn btn-outline btn-sm schedule-day-btn" data-day="thursday">Thursday</button>
+        <button class="btn btn-outline btn-sm schedule-day-btn" data-day="friday">Friday</button>
+        <button class="btn btn-outline btn-sm schedule-day-btn" data-day="saturday">Saturday</button>
+        <button class="btn btn-outline btn-sm schedule-day-btn" data-day="sunday">Sunday</button>
+      </div>
+
+      <!-- Category Filter Dropdown -->
+      <div style="max-width: 300px; margin: 0 auto 40px auto;">
+        <select id="categoryFilterSelect" class="form-control">
+          <option value="all">All Categories</option>
+          <option value="hiit">HIIT & Cardio</option>
+          <option value="strength">Strength & Power</option>
+          <option value="yoga">Yoga & Mobility</option>
+          <option value="boxing">Boxing & Crossfit</option>
+        </select>
+      </div>
+
+      <!-- Timetable Cards Container -->
+      <div class="grid grid-3" id="scheduleContainer">
+
+        <!-- Monday Slots -->
+        <div class="card schedule-card" data-day="monday" data-category="hiit">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-primary">Monday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 06:00 AM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Hyper HIIT Burn</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Elena Rostova | Main Turf</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Hyper HIIT Burn (Mon 06:00 AM)">Reserve Spot</button>
+        </div>
+
+        <div class="card schedule-card" data-day="monday" data-category="strength">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-secondary">Monday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 05:00 PM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Heavy Iron Power</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Marcus Vance | Power Racks</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Heavy Iron Power (Mon 05:00 PM)">Reserve Spot</button>
+        </div>
+
+        <!-- Tuesday Slots -->
+        <div class="card schedule-card" data-day="tuesday" data-category="yoga">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-primary">Tuesday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 07:00 AM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Zen Power Yoga</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Sarah Jenkins | Mind-Body Studio</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Zen Power Yoga (Tue 07:00 AM)">Reserve Spot</button>
+        </div>
+
+        <div class="card schedule-card" data-day="tuesday" data-category="boxing">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-secondary">Tuesday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 06:30 PM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Knockout Boxing</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: David Miller | Boxing Ring</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Knockout Boxing (Tue 06:30 PM)">Reserve Spot</button>
+        </div>
+
+        <!-- Wednesday Slots -->
+        <div class="card schedule-card" data-day="wednesday" data-category="hiit">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-primary">Wednesday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 06:00 AM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Hyper HIIT Burn</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Elena Rostova | Main Turf</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Hyper HIIT Burn (Wed 06:00 AM)">Reserve Spot</button>
+        </div>
+
+        <div class="card schedule-card" data-day="wednesday" data-category="boxing">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-secondary">Wednesday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 05:30 PM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Crossfit WOD</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: David Miller | Functional Rig</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Crossfit WOD (Wed 05:30 PM)">Reserve Spot</button>
+        </div>
+
+        <!-- Thursday Slots -->
+        <div class="card schedule-card" data-day="thursday" data-category="strength">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-primary">Thursday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 05:00 PM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Heavy Iron Power</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Marcus Vance | Power Racks</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Heavy Iron Power (Thu 05:00 PM)">Reserve Spot</button>
+        </div>
+
+        <!-- Friday Slots -->
+        <div class="card schedule-card" data-day="friday" data-category="yoga">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-secondary">Friday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 06:00 PM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Core Reformer Pilates</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Sarah Jenkins | Pilates Studio</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Core Reformer Pilates (Fri 06:00 PM)">Reserve Spot</button>
+        </div>
+
+        <!-- Saturday Slots -->
+        <div class="card schedule-card" data-day="saturday" data-category="hiit">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-primary">Saturday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 09:00 AM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Weekend Warrior HIIT</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Elena Rostova | Main Turf</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Weekend Warrior HIIT (Sat 09:00 AM)">Reserve Spot</button>
+        </div>
+
+        <!-- Sunday Slots -->
+        <div class="card schedule-card" data-day="sunday" data-category="yoga">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span class="badge badge-secondary">Sunday</span>
+            <span style="color: var(--primary); font-weight: 700;"><i class="fa-regular fa-clock"></i> 10:00 AM</span>
+          </div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; text-transform: uppercase;">Sunday Recovery Yoga</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Instructor: Sarah Jenkins | Mind-Body Studio</p>
+          <button class="btn btn-primary btn-sm reserve-btn" data-class="Sunday Recovery Yoga (Sun 10:00 AM)">Reserve Spot</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Modal -->
+  <div class="modal" id="reserveModal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <h3 style="font-family: var(--font-heading); font-size: 2.2rem; text-transform: uppercase; margin-bottom: 10px;">RESERVE CLASS SLOT</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;" id="selectedSlotText">Selected: General Slot</p>
+
+      <form id="reserveForm">
+        <div class="form-group">
+          <label for="resName" class="form-label">Full Name</label>
+          <input type="text" id="resName" class="form-control" placeholder="Jane Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="resEmail" class="form-label">Email Address</label>
+          <input type="email" id="resEmail" class="form-control" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="resPhone" class="form-label">Phone Number</label>
+          <input type="tel" id="resPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Spot</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4">
+        <div>
+          <a href="index.html" class="brand-logo footer-brand">
+            <span class="brand-icon"><i class="fa-solid fa-dumbbell"></i></span>
+            <span>FISTA <span class="accent">FITNESS</span></span>
+          </a>
+          <p class="footer-text">Empowering athletes and fitness enthusiasts of all levels with premier coaching, cutting-edge facilities, and vibrant support.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Fista Fitness</a></li>
+            <li><a href="classes.html">Workout Classes</a></li>
+            <li><a href="schedule.html">Weekly Timetable</a></li>
+            <li><a href="pricing.html">Membership Plans</a></li>
+            <li><a href="calculators.html">Fitness Calculators</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Fitness Tools</h4>
+          <ul class="footer-links">
+            <li><a href="calculators.html">BMI Calculator</a></li>
+            <li><a href="calculators.html">BMR & TDEE Calculator</a></li>
+            <li><a href="calculators.html">Macro Ratio Guide</a></li>
+            <li><a href="blog.html">Workout Tips & Guides</a></li>
+            <li><a href="contact.html">Gym Locations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Info</h4>
+          <ul class="footer-links" style="gap: 15px;">
+            <li><i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> 123 Muscle & Power Way, Metro City, NY</li>
+            <li><i class="fa-solid fa-phone" style="color: var(--primary);"></i> +1 (800) 555-FISTA</li>
+            <li><i class="fa-solid fa-envelope" style="color: var(--primary);"></i> info@fistafitness.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fista Fitness Gym & Fitness Center. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/schedule.js"></script>
+</body>
+</html>
